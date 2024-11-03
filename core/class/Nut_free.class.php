@@ -447,11 +447,11 @@ class Nut_free extends eqLogic
 					$result = (int) ($result*60);
 				}
 				/*Affiche en minutes*/
-				if (($info['logicalId'] == 'batt_runtime_min') || ($info['logicalId'] == 'timer_shutdown_min')) {
+				if (($info['logicalId'] == 'timer_shutdown_min')) {
 					//echo gettype($result);
 					settype($result, "float");
 					// echo $result;
-					$result = (int) ($result);
+					$result = (int) ($result/60);
 				}
 				/*Log pour debug */
 				if (!strstr($errorresult, 'not supported by UPS')) {
